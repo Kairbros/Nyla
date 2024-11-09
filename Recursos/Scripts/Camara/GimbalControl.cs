@@ -13,6 +13,7 @@ public partial class GimbalControl : SpringArm3D
 			Far = 200,
 			Current = true,
 		};
+		CollisionMask = 4;
 		AddChild(Camara);
 		Input.MouseMode = Input.MouseModeEnum.Captured;	
 	}
