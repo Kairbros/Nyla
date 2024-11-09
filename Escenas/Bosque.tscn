@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://h2h5srjalw4r"]
+
+[ext_resource type="PackedScene" uid="uid://wjsbh3qrdq2b" path="res://Escenas/Nyla.tscn" id="1_noops"]
+[ext_resource type="PackedScene" uid="uid://b6ob5iis7qfar" path="res://Escenas/TroncoColgante.tscn" id="2_ovr1y"]
+[ext_resource type="PackedScene" uid="uid://bluoku2r0stim" path="res://Escenas/CasaLarga.tscn" id="3_hu3rh"]
+
+[node name="Mundo" type="Node3D"]
+
+[node name="Luz" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.38107, 0.924546, 0, -0.924546, -0.38107, 0, 0, -73.9653)
+shadow_enabled = true
+
+[node name="GenericSong" type="AudioStreamPlayer" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 226.465, 34.4507, 9.4151)
+use_collision = true
+collision_layer = 4
+collision_mask = 0
+size = Vector3(453.931, 69.9015, 532.178)
+
+[node name="Nyla" parent="." instance=ExtResource("1_noops")]
+transform = Transform3D(0.999302, 0.0373588, 0, -0.0373588, 0.999302, 0, 0, 0, 1, 1.81555, 72.1381, -93.3406)
+
+[node name="TroncoColgante" parent="." instance=ExtResource("2_ovr1y")]
+transform = Transform3D(0.0114841, 0, -0.999934, 0, 1, 0, 0.999934, 0, 0.0114841, -13.4018, 63.1344, -79.2677)
+
+[node name="CasaLarga" parent="." instance=ExtResource("3_hu3rh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5335, 69.4014, -124.909)
